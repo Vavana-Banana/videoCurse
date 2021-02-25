@@ -28,43 +28,60 @@ public class Employee {
     }
 
     //1 открыт (стринг инт доубле)
-    public Employee(String surname, int id, double salary) {
+    public Employee(String surname) {
         this.surname = surname;
-        Id = id;
-        this.salary = salary;
+
     }
 
     //2 дефолт (инт доубл стринг)
-    Employee(int id, double salary, String surname) {
-        this.surname = surname;
+    Employee(int id) {
+
         Id = id;
-        this.salary = salary;
+
     }
 
     //3 закрыт (доубле инт стринг)
-    private Employee(double salary, int id, String surname) {
-        this.surname = surname;
-        Id = id;
+    private Employee(double salary) {
+
+
         this.salary = salary;
+    }
+
+    public void getId() {
+        System.out.println("ID = " + Id);
+    }
+
+    public void getSalary() {
+        System.out.println("Salary = " + salary);
+    }
+
+    public void getSurname() {
+        System.out.println("Surname = " + surname);
     }
 }
 
 class EmployeeTest {
     public static void main(String[] args) {
-        Employee empPub = new Employee("Ivanov", 001, 2000.0);
+        Employee empPub = new Employee("Ivanov");
         empPub.employeeInfo();
         System.out.println(empPub.surname);
         System.out.println(empPub.Id);
-      //  System.out.println(empPub.salary);
+        //  System.out.println(empPub.salary);
+        empPub.getId();
+        empPub.getSalary();
+        empPub.getSurname();
 
-        Employee empDef = new Employee(002, 3000.0, "Petrov");
+        Employee empDef = new Employee(002);
         empDef.employeeInfo();
         System.out.println(empDef.surname);
         System.out.println(empDef.Id);
         //System.out.println(empDef.salary);
+        empDef.getId();
+        empDef.getSalary();
+        empDef.getSurname();
 
 
-        //Employee empPriv = new Employee(2500.0, 003, "Galkina");
+        // Employee empPriv = new Employee(2500.0);
         // empPriv.employeeInfo();
     }
 }
