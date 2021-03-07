@@ -1,7 +1,7 @@
 package video.curse.lection008;
 
 public class Homework08_2 {
-    static final double PI = 3.14;
+    public final static double PI = 3.14;
 
     //method 1 plochad
     public void met1(double radius1) {
@@ -25,6 +25,15 @@ public class Homework08_2 {
         Homework08_2.met2(radius3);
 
     }
+
+    public void info(double radius4) {
+        met1(radius4);
+        met2(radius4);
+        System.out.println("Radius = " + radius4);
+
+
+    }
+
 }
 
 class Homework08_Test {
@@ -35,6 +44,8 @@ class Homework08_Test {
         Homework08_2.met2(15);
         System.out.println(" ");
         hom1.met3(20);
+        System.out.println(" ");
+        hom1.info(25);
 
     }
 

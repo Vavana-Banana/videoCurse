@@ -2,7 +2,7 @@ package video.curse.lection008;
 
 public class Homework08 {
     //first method
-    public static int met1(int a1, int b1, int c1) {
+    public static double met1(double a1, double b1, double c1) {
         return a1 * b1 * c1;
     }
 
