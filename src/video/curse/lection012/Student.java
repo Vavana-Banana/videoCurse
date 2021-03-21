@@ -19,31 +19,28 @@ public class Student {
 
             } else System.out.println("Ony ne ravny");
         }
-        void equalStDetail(Student st1, Student st2){
 
-            if (st1.name==st2.name){
-                if (st1.course==st2.course){
-                    if (st1.grade==st2.grade){
+        void equalStDetail(Student st1, Student st2) {
+
+            if (st1.name == st2.name) {
+                if (st1.course == st2.course) {
+                    if (st1.grade == st2.grade) {
                         System.out.println("Studenty ravny");
-                    }
-                    else System.out.println("Studenty ne ravny ocenki");
-                }
-                else System.out.println("Studenty ne ravny cursy");
-            }
-            else System.out.println("Studenty ne ravny imena");
+                    } else System.out.println("Studenty ne ravny ocenki");
+                } else System.out.println("Studenty ne ravny cursy");
+            } else System.out.println("Studenty ne ravny imena");
         }
 
 
         public static void main(String[] args) {
+            StudentTest eq = new StudentTest();
             Student st1 = new Student("Ivan", 4, 7.8);
             Student st2 = new Student("Ivan", 4, 8.8);
 
-            StudentTest eq = new StudentTest();
 
             eq.equalSt(st1, st2);
 
             eq.equalStDetail(st1, st2);
-
 
 
         }
