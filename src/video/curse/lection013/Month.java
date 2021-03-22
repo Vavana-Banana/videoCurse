@@ -1,17 +1,10 @@
 package video.curse.lection013;
 
 public class Month {
-    public static int monthNumber(int a) {
-        if (a > 0 && a < 13) {
-            System.out.println("Month " + a);
-            return a;
+    public static void monthNumber(int a) {
 
-        } else return 0;
-    }
 
-    public static void main(String[] args) {
-
-        switch (monthNumber(2)) {
+        switch (a) {
             case 1:
 
             case 3:
@@ -43,5 +36,15 @@ public class Month {
                 System.out.println("This month not exist");
                 break;
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        monthNumber(1);
+        monthNumber(0);
+        monthNumber(190);
+        monthNumber(5);
+        monthNumber(2);
     }
 }
