@@ -15,11 +15,11 @@ public class Car {
 
 class CarTest {
 
-    public static void changeCountDoors(int a, Car car1) {
+    void changeCountDoors(int a, Car car1) {
         car1.countDoors = a;
     }
 
-    public static void changeColors(Car car1, Car car2) {
+    void changeColors(Car car1, Car car2) {
         String s;
         s = car1.color;
         car1.color = car2.color;
@@ -31,6 +31,8 @@ class CarTest {
         Car car1 = new Car("Yellow", 5);
         Car car2 = new Car("Green", 2);
 
+        CarTest ct = new CarTest();
+
         System.out.println(car1.color);
         System.out.println(car1.countDoors);
         System.out.println();
@@ -40,10 +42,10 @@ class CarTest {
         System.out.println();
 
 
-        CarTest.changeCountDoors(4, car1);
-        CarTest.changeCountDoors(4, car2);
+        ct.changeCountDoors(4, car1);
+        ct.changeCountDoors(4, car2);
 
-        CarTest.changeColors(car1, car2);
+        ct.changeColors(car1, car2);
 
         System.out.println(car1.color);
         System.out.println(car1.countDoors);

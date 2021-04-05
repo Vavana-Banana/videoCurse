@@ -1,5 +1,7 @@
 package video.curse.lection010.P4;
 
+import static video.curse.lection010.P1.P2.B.*;
+
 import video.curse.lection010.P1.P2.B;
 import video.curse.lection010.P1.P2.P3.C;
 import video.curse.lection010.P1.A;
@@ -11,7 +13,12 @@ public class D {
 
         A testAinD = new A();
 
+        b = 5;
+
+        testB("Hello from static B");
+
         B.testB("Hello from B");
+
 
         C testCinD = new C();
 
@@ -33,7 +40,6 @@ public class D {
         testAinD.testA("Hello from A");
 
         testEinD.testE("Hello from E");
-
 
 
     }
